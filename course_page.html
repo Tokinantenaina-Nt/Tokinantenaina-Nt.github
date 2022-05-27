@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Assets/CSS/Style.css" />
     <link rel="stylesheet" href="Assets/Bootstrap/bootstrap.min.css" />
-    <script src="index.js"></script>
     <script src="Assets/Bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="jquery.js"></script>
     <title>Acceuil</title>
   </head>
   <body>
@@ -155,56 +155,32 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-6 p-0 bgBlue">
+          <div
+            class="col-md-6 p-0 bgBlue d-flex align-items-center justify-content-center"
+          >
             <div class="middle">
-              <div class="logo">
-                <img
-                  src="Assets/Images/logoSSR.png"
-                  alt=""
-                  width="50%"
-                  class="imageArrondi mt-5"
-                  
-                />
-              
-              </div>
-              <h1 style="visibility: hidden;">Acceuil</h1>
-              <div class="">
-                <!-- [SSR]... Simuler votre entretien d'embauche -->
-                <div class="text-center" > 
-                  <form action="">
-                    <p style="color: var(--prim_black); text-align: center">
-                      IDENTIFIEZ - VOUS
-                    </p>
-                    <input
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Identifiant ou email"
-                      class="formAremplir my-1"
-                    />
-                    <input
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Mot de passe"
-                      class="formAremplir"
-                    />
-                  </form>
-                  <a href="dashboard_page.html"
-                    ><button class="boutton_no_bgZoom my-2">
-                      Connecter
-                    </button> </a
-                  ><br />
-                  <p style="font-size: smaller" class="pt-2 text-center">
-                    Connecter ou
-                    <a href=""
-                      ><span style="color: var(--prim_black)"
-                        >creer un compte</span
-                      ></a
-                    >
-                    pour suivre votre progréssion
-                  </p>
-                </div>
+              <h1 class="p-3 beforeTrans " id="course" style="text-align: center ;">Course</h1>
+              <img src="assets/Images/logoSSRpng.png" alt="" width="50%">
+              <p class="text-center italic" style="color: rgb(237, 235, 235)">
+                Cette page est en cours de création ... Vous puiserez ici les
+                ressources nécessaires pour affronter votre entretien d'embauche
+              </p>
+              <div class="d-flex justify-content-center pt-4 mx-5">
+                <a href="simulating_page.html"
+                  ><button
+                    class="boutton_no_bg2 bgBlue mx-5"
+                    style="width: 100px"
+                  >
+                    simulating
+                  </button></a
+                >
+                <br />
+                <a href="dashboard_page.html"
+                  ><button class="boutton_no_bg2 bgBlue" style="width: 100px">
+                    Acceuil
+                  </button></a
+                >
+                <br />
               </div>
             </div>
           </div>
@@ -343,5 +319,6 @@
         <p>&#169; 2022 Tokinantenaina Nt, Inc. All rights reserved</p>
       </section>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>

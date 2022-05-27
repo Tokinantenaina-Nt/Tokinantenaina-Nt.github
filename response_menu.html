@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="Assets/Bootstrap/bootstrap.min.css" />
     <script src="index.js"></script>
     <script src="Assets/Bootstrap/bootstrap.bundle.min.js"></script>
-    <title>Acceuil</title>
+    <title>MenuSSR</title>
   </head>
   <body>
     <header>
@@ -112,7 +112,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-3 p-0 bgBlue">
-            <div class="tab_left d-none d-md-block">
+            <div class="tab_left" id="soon">
               <ul>
                 <a href="dashboard_page.html"> <li>Acceuil</li></a>
                 <a href="course_page.html"> <li>Course</li></a>
@@ -162,60 +162,18 @@
                   src="Assets/Images/logoSSR.png"
                   alt=""
                   width="50%"
-                  class="imageArrondi mt-5"
-                  
+                  style="border-radius: 100%"
                 />
-              
               </div>
-              <h1 style="visibility: hidden;">Acceuil</h1>
-              <div class="">
-                <!-- [SSR]... Simuler votre entretien d'embauche -->
-                <div class="text-center" > 
-                  <form action="">
-                    <p style="color: var(--prim_black); text-align: center">
-                      IDENTIFIEZ - VOUS
-                    </p>
-                    <input
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Identifiant ou email"
-                      class="formAremplir my-1"
-                    />
-                    <input
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Mot de passe"
-                      class="formAremplir"
-                    />
-                  </form>
-                  <a href="dashboard_page.html"
-                    ><button class="boutton_no_bgZoom my-2">
-                      Connecter
-                    </button> </a
-                  ><br />
-                  <p style="font-size: smaller" class="pt-2 text-center">
-                    Connecter ou
-                    <a href=""
-                      ><span style="color: var(--prim_black)"
-                        >creer un compte</span
-                      ></a
-                    >
-                    pour suivre votre progréssion
-                  </p>
-                </div>
-              </div>
+              <h1 style="visibility: hidden">Acceuil</h1>
+              <div class="">[SSR]... Simuler votre entretien d'embauche</div>
             </div>
           </div>
           <div class="col-md-3 p-0 bgBlue">
-            <div class="tab_right d-none d-md-block">
+            <div class="tab_right">
               <ul>
                 <li>Votre profil</li>
-                <span style="font-style: italic; color: gray">
-                  Veuillez-vous identifier</span
-                >
-                <ul class="noPuce" style="padding: 5%; visibility: hidden">
+                <ul class="noPuce" style="padding: 5%">
                   <li>
                     Nom : <span style="color: var(--prim_blue)">ANDRIANA</span>
                   </li>
@@ -224,27 +182,27 @@
                     <span style="color: var(--prim_blue)">Rakoto George</span>
                   </li>
                   <li>
-                    Proffession :
+                    Profession :
                     <span style="color: var(--prim_blue)">Etudiant</span>
                   </li>
                   <li>
                     Status :
-                    <span style="color: var(--prim_blue)">Postulant</span>
+                    <span style="color: var(--prim_blue)">postulant</span>
                   </li>
                   ...
                 </ul>
                 <li>
                   <!-- <img
-                    src="Assets/Images/notifications.png"
-                    alt="cloche"
-                    width="15px"
-                  /> -->
+                      src="Assets/Images/notifications.png"
+                      alt="cloche"
+                      width="15px"
+                    /> -->
                   Notification
                 </li>
 
                 <ul class="noPuce" style="padding: 5%">
                   <li>
-                    <span style="color: var(--prim_blue)"> 0 </span>
+                    <span style="color: var(--prim_blue)"> 1 </span>
                     <span>vidéo(s) en ligne privé </span>
                   </li>
                   <li>
@@ -252,7 +210,7 @@
                     <span>vidéo(s) en ligne public </span>
                   </li>
                   <li>
-                    <span style="color: var(--prim_blue)"> 0 </span>
+                    <span style="color: var(--prim_blue)"> 1 </span>
                     <span>vidéo(s) à noter </span>
                   </li>
                   ...

@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Assets/CSS/Style.css" />
     <link rel="stylesheet" href="Assets/Bootstrap/bootstrap.min.css" />
-    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="Assets/Bootstrap/bootstrap.bundle.min.js"></script>
-    <title>Acceuil</title>
+    <script src="jquery.js"></script>
+   
+    <title>simulating_poste_page</title>
   </head>
   <body>
     <header>
@@ -150,72 +152,134 @@
                   </span>
                 </li>
                 <li class="pt-5">
-                  <span style="font-style: italic"> Consulter un coach </span>
-                </li>
+                    <span style="font-style: italic"> Consulter un coach </span>
+                  </li>
               </ul>
             </div>
           </div>
-          <div class="col-md-6 p-0 bgBlue">
-            <div class="middle">
-              <div class="logo">
-                <img
-                  src="Assets/Images/logoSSR.png"
-                  alt=""
-                  width="50%"
-                  class="imageArrondi mt-5"
-                  
-                />
-              
-              </div>
-              <h1 style="visibility: hidden;">Acceuil</h1>
-              <div class="">
-                <!-- [SSR]... Simuler votre entretien d'embauche -->
-                <div class="text-center" > 
-                  <form action="">
-                    <p style="color: var(--prim_black); text-align: center">
-                      IDENTIFIEZ - VOUS
-                    </p>
-                    <input
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Identifiant ou email"
-                      class="formAremplir my-1"
-                    />
-                    <input
-                      type="text"
-                      name=""
-                      id=""
-                      placeholder="Mot de passe"
-                      class="formAremplir"
-                    />
-                  </form>
-                  <a href="dashboard_page.html"
-                    ><button class="boutton_no_bgZoom my-2">
-                      Connecter
-                    </button> </a
-                  ><br />
-                  <p style="font-size: smaller" class="pt-2 text-center">
-                    Connecter ou
-                    <a href=""
-                      ><span style="color: var(--prim_black)"
-                        >creer un compte</span
-                      ></a
-                    >
-                    pour suivre votre progréssion
-                  </p>
+          <div class="col-md-6 middle bgBlue p-0">
+            
+            <h1>Simulating evaluate</h1>
+            <h3> <span style="color: var(--prim_black); font-size: smaller;">Commercial / Commerciale </span></h3>
+            <p style="color: var(--prim_red);">Comment évaluez-vous cette réponse ?</p>
+            <!-- ---------------------- section video ---------------------------------------  -->
+            <div class="conatiner">
+                <div class="row">
+                    <div class="col-md-10">
+
+                    </div>
+                    <div class="col-md-2">
+                        
+                    </div>
                 </div>
-              </div>
             </div>
+    
+            <!-- ---------------------- section video ---------------------------------------  -->
+          
+            <div class="conatiner">
+                
+                      <div class="row">
+                        <div class="col-md-10">
+                          <div class="  pb-4 beforeTrans" id="qst1">
+                            <span class="underline ">1st qst </span>: 
+                            <span class="italic fw-bold">De quoi êtes-vous le plus fier ?</span> 
+                        </div>
+                        <!-- ----------------------------------------------------------- -->
+                        <!-- ------------------ section video2 -----------------------  -->
+                        <div class="d-none pb-4" id="qst2">
+                            <span class="underline" >2nd qst  </span> :
+                            <span class="italic fw-bold">Quelles sont, à votre avis, les qualités premières d’un commercial ?</span>
+                        </div>
+                        <!-- ---------------  -->
+                        <div class="d-none pb-4" id="qst3">
+                            <span class="underline" >3rd qst  </span> :
+                            <span class="italic fw-bold">Combien vendiez-vous de telle chose par mois (ou par an) ?</span>
+                        </div>
+                        <!-- ---------------- -->
+                        <div class="d-none pb-4" id="qst4">
+                            <span class="underline" > 4th qst </span>
+                            <span class="italic fw-bold">Qu’avez-vous fait depuis votre dernier emploi ?</span>
+                        </div>
+                        <!-- ---------------  -->
+                        <div class="d-none pb-4" id="qst5">
+                            <span class="underline" >5th qst : </span>
+                            <span class="italic fw-bold">Pourquoi devrions-nous vous embaucher ?</span>
+                            <p class="text-center d-none p-0" style="color: var(--prim_blueText);"></p>
+                        </div>
+                        </div>
+                      </div>
+                     
+                    <div class="row">
+                      <div class="col-md-10">
+                            <video autoplay id="vid" style="width: 100%; height:200px; border: solid 1px white; "></video>
+                            
+                            <div class="d-flex justify-content-center  mx-5">
+
+                                <!-- -------------- REC mode  ---------------- -->
+                                <!-- <a href="simulating_poste_page.html"><button class="boutton_no_bg2 bgBlue mx-5" style="width: auto;">REC mode</button> </a> -->
+                                <!-- ------------------------------------------  -->
+
+                                <div class="col-md-2 btnFlexRow" style="height:200px;">  
+                                  <div>
+                                      <button id="good" onclick="confirm('You Give 1* for this video?')" class="yesBtn boutton_no_bg bgBlue noBorder "> <img src="Assets/Images/mintegral_reward_vast_end_ok.png" alt="check vert ok" width="15px"> Good</button>
+                                  </div>
+                                  <div>
+                                      <a href="feedback_page.html"><button onclick="confirm('Give a Feedback ?')" class="yesBtn boutton_no_bg bgBlue noBorder "> <img src="Assets/Images/mintegral_cm_refresh_nor.png" alt="" width="15px"> Not Yet</button></a>
+                                  </div>
+                                  <div>
+                                      <button class="yesBtn boutton_no_bg bgBlue noBorder " onclick="clicShow()"> <img src="Assets/Images/abc_btn_check_to_on_mtrl_000.png" alt="" width="15px"> No Idea</button>
+                                  </div>
+
+                                  <!-- -------------------- No idea suggest ------------------  -->
+                                  <div class="share d-none" style=" width: 100PX; height: 100px; margin-left: -25%;" id="share"; >
+                                   <p class="p-2" style="font-size: x-small;">Suggérer à un ami :</p> 
+                                    <select name="" >
+                                      <option value="">Liste des amis</option>
+                                      <option value="" class="italic">Vous n'avez pas encore</option>
+                                     
+                                      <option value="">...</option> 
+                                      <option value="">Public</option> 
+                                    </select> <br>
+                                    <button onclick="confirm('partager le video à ... ?'), hideShare()" class="boutton_no_bgZoom my-3 text-center">share</button>
+                                  </div>
+                                  <!-- ---------------------------  -->
+
+                                  <div>
+                                    <button onclick="nextQst()" class="yesBtn boutton_no_bg bgBlue noBorder" id="next" ><img src="Assets/Images/media2_widget_ic_skip_next.png" alt="" width="15px">Next</button>
+                                </div>
+                          </div>
+                            </div>
+                    </div>
+                    <div class="col-md-2 btnFlex p-0 recMode" style="height:200px; "> 
+
+                      <a href="simulating_poste_page.html"><button onclick="confirm('Passer en mode recording ?')" class="boutton_no_bgZoom noBorder mx-5" style="width: auto; background-color: var(--prim_red);">REC mode</button> </a>
+
+
+                      <!-- menu video --------------------   -->
+                            <!-- <div>
+                                <button class="yesBtn boutton_no_bg2 bgBlue noBorder "> <img src="Assets/Images/mintegral_reward_vast_end_ok.png" alt="check vert ok" width="15px"> Good</button>
+                            </div>
+                            <div>
+                                <button class="yesBtn boutton_no_bg2 bgBlue noBorder "> <img src="Assets/Images/mintegral_cm_refresh_nor.png" alt="" width="15px"> Not Yet</button>
+                            </div>
+                            <div>
+                                <button class="yesBtn boutton_no_bg2 bgBlue noBorder "> <img src="Assets/Images/abc_btn_check_to_on_mtrl_000.png" alt="" width="15px"> No Idea</button>
+                            </div>
+                            <div>
+                              <button onclick="nextQst()" class="yesBtn boutton_no_bg2 bgBlue noBorder" id="next" ><img src="Assets/Images/media2_widget_ic_skip_next.png" alt="" width="15px">Next</button>
+                          </div> -->
+                      <!-- ---------------------  -->
+                    </div>
+                </div>
+            </div>
+                <!-- ---------------------------------------------------------------------------------- -->
+
           </div>
           <div class="col-md-3 p-0 bgBlue">
             <div class="tab_right d-none d-md-block">
               <ul>
                 <li>Votre profil</li>
-                <span style="font-style: italic; color: gray">
-                  Veuillez-vous identifier</span
-                >
-                <ul class="noPuce" style="padding: 5%; visibility: hidden">
+                <ul class="noPuce" style="padding: 5%">
                   <li>
                     Nom : <span style="color: var(--prim_blue)">ANDRIANA</span>
                   </li>
@@ -224,7 +288,7 @@
                     <span style="color: var(--prim_blue)">Rakoto George</span>
                   </li>
                   <li>
-                    Proffession :
+                    Profession :
                     <span style="color: var(--prim_blue)">Etudiant</span>
                   </li>
                   <li>
@@ -244,7 +308,7 @@
 
                 <ul class="noPuce" style="padding: 5%">
                   <li>
-                    <span style="color: var(--prim_blue)"> 0 </span>
+                    <span style="color: var(--prim_blue)"> 1 </span>
                     <span>vidéo(s) en ligne privé </span>
                   </li>
                   <li>
@@ -252,7 +316,7 @@
                     <span>vidéo(s) en ligne public </span>
                   </li>
                   <li>
-                    <span style="color: var(--prim_blue)"> 0 </span>
+                    <span style="color: var(--prim_blue)"> 1 </span>
                     <span>vidéo(s) à noter </span>
                   </li>
                   ...
@@ -260,9 +324,7 @@
               </ul>
             </div>
           </div>
-        </div>
-      </div>
-    </main>
+</main>
     <footer>
       <section class="d-none d-md-block py-3">
         <div class="container">
@@ -343,5 +405,6 @@
         <p>&#169; 2022 Tokinantenaina Nt, Inc. All rights reserved</p>
       </section>
     </footer>
+    <script src="index.js"></script>
   </body>
 </html>
